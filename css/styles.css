@@ -537,7 +537,7 @@ a {
 
     @media only screen and (min-resolution: 192dpi) and (max-width: 1157px) {
         .effective_section{
-            background-image: url('../images/people-office-laptop@2x.jpg');
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url('../images/people-office-laptop@2x.jpg');
         }     
         
     }
