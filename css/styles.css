@@ -103,6 +103,12 @@ a {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.backdrop.is-open {
+    opacity: 1; 
+    pointer-events: auto; 
+    visibility: visible;
+}
+
 .modal_container {
     padding: 72px 24px 24px 24px;
     position: absolute;
@@ -469,6 +475,13 @@ a {
     padding: 72px 0;
 }
 
+@media only screen and (min-resolution: 192dpi) and (max-width: 767px) {
+    .effective_section{
+        background-image: url('../images/people-office-mobil@2x.jpg');
+    }     
+    
+}
+
 .effective_title {
     width: 216px;
     margin: 0 auto;
@@ -522,6 +535,13 @@ a {
         padding: 112px 0;
     }
 
+    @media only screen and (min-resolution: 192dpi) and (max-width: 1157px) {
+        .effective_section{
+            background-image: url('../images/people-office-laptop@2x.jpg');
+        }     
+        
+    }
+
     .effective_title {
         margin: 0 auto;
         text-align: center;
@@ -551,6 +571,13 @@ a {
         background-position: center;
         color: #F4F4FD;
         padding: 188px 0;
+    }
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 1158px) {
+        .effective_section{
+            background-image: url('../images/people-office-1@2x.jpg');
+        }     
+        
     }
 
 
@@ -1721,7 +1748,7 @@ position: fixed;
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu_container .is-open {
+.menu_container.is-open {
     opacity: 1; 
     pointer-events: auto; 
     visibility: visible;
