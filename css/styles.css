@@ -261,7 +261,6 @@ a {
     align-items: center;
     justify-content: center;
     fill: transparent;
-    margin-top: 7px;
     margin-right: 8px;
 } 
 
@@ -277,10 +276,7 @@ a {
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: flex;
-}
-
-.privacy_policy_container {
-    display: block;
+    align-content: center;
 }
 
 .send_btn {
