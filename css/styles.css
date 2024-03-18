@@ -1782,8 +1782,8 @@ a {
 
 .close_btn_menu {
     position: absolute;
+    top: 24px;
     right: 24px;
-    margin-top: 24px;
     display: flex;
     width: 24px;
     height: 24px;
