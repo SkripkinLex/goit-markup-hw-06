@@ -615,7 +615,7 @@ a {
 
 .cart_section {
     margin: 0 auto;
-    padding: 96px 0 24px;
+    padding: 96px 0;
 }
 
 .visually-hidden {
@@ -635,9 +635,13 @@ a {
     display: none;
 }
 
-.cart_li {
-    margin-bottom: 72px;
+
+@media screen and (max-width: 767px) {
+    .cart_li:not(:last-child) {
+        margin-bottom: 72px;
+    }
 }
+
 
 .cart_item {
     color: #2E2F42;
@@ -752,7 +756,7 @@ a {
     margin: 0 auto;
     background-color: #F4F4FD;
     padding-top: 96px;
-    padding-bottom: 24px;
+    padding-bottom: 96px;
 }
 
 .team_container {
@@ -780,8 +784,15 @@ a {
     background-color: #FFFFFF;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     border-radius: 0 0 4px 4px;
-    margin-bottom: 72px;
+    
 }
+
+@media screen and (max-width: 767px) {
+    .team_cart:not(:last-child) {
+        margin-bottom: 72px;
+    }
+}
+
 
 .cart_container {
     padding: 32px 0;
@@ -950,7 +961,7 @@ a {
 /*======================================= sektion 4 =======================================*/
 
 .portfolio_section {
-    padding-top: 84px; 
+    padding: 96px 0; 
 }
 
 
@@ -973,8 +984,13 @@ a {
 .portfolio_li {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: block; 
-    margin-bottom: 72px;
 }
+@media screen and (max-width: 767px){
+    .portfolio_li:not(:last-child) {
+        margin-bottom: 72px;
+    }
+}
+
 
 .portfolio_li:hover .portfolio_overlau_text,
 .portfolio_li:focus .portfolio_overlau_text {
@@ -1725,6 +1741,10 @@ a {
 
 @media screen and (max-width: 768px){
 
+a {
+    color: #2e2f42;
+}
+
 .menu_container {
 position: fixed;
     top: 0;
@@ -1733,11 +1753,12 @@ position: fixed;
     width: 100%;
     height: 100%;
     background: #fcfcfc;
-    /* opacity: 0;
-    visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .menu_container.is-open {
@@ -1750,16 +1771,16 @@ position: fixed;
     position: absolute;
     top: 50%;
     left: 50%;
+    height: 100%;
     transform: translate(-50%, -50%);
     background: #fcfcfc;
-    width: 320px;
-    min-height: 684px;
-    border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    margin-left: 16px;
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
+    gap: 50px;
+    padding-top: 72px;
+    padding-bottom: 40px;
 }
 
 .close_btn_menu {
@@ -1790,28 +1811,32 @@ position: fixed;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav_list_menu {
+.nav_lists_menu {
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
-    width: 200px;
-    max-height: 200px;
+    gap: 24px;
     font-weight: 700;
     line-height: 1.1;
     font-size: 36px;
     letter-spacing: 0.02em;
-    color: #2e2f42;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    width: 200px;
 }
 
 .current {
     color: #404bbf;
 }
 
+.container_info_menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 160px;
+}
+
 .addres_menu {
     font-style: normal;
-    display: block;
 }
 
 .addres_ul_menu {
@@ -1838,7 +1863,6 @@ position: fixed;
 .list_icone_menu {
     display: flex;
     gap: 40px;
-    height: 100%;
 }
 
 .social_icone_team {
